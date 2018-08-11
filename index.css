@@ -1,36 +1,61 @@
-h1{
+body {
+  font-family: Impact;
+}
+
+h1 {
+  font-size: 40px;
   text-align: center;
 }
-/* this targets the cells and is styling for that.
-included cursor pointer so when the mouse is on the element it looks like you can click it */
-td{
-  border: 2px solid black;
-  height: 100px;
-  width: 100px;
+
+h2 {
+  font-size: 30px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.dice {
+  border-collapse: collapse;
+  height: 360px;
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 100px;
+    /* border: solid black 4px; */
+  border-radius: 10px;
   cursor: pointer;
 }
-/* targets all the elements inside the table.
-border-collapse: collapse removes the individual border styled above. and margin left -155 is divided by 2 so it goes to the middle */
-table{
-  border-collapse: collapse;
-  position: absolute;
-  left: 50%;
-  margin-left: -155px;
-  top: 100px;
+
+.square {
+  border: 2px solid black;
+  height: 115px;
+  width: 114px;
+  display: inline-block;
 }
-/* targets the table cell elements and tagets the first child and removes the top */
-table tr:first-child td{
-  border-top: 0px;
+
+.dot {
+  margin: 0 auto;
+  border-radius: 100%;
+  height: 74px;
+  width: 75px;
+  margin-top: 18px;
+  background-color: black;
 }
-/* same as the top targets the last child in the grid and removes the border */
-table tr:last-child td{
-  border-bottom: 0px;
+.O{
+  color: black !important;
 }
-/* select every table tr and just the first child td */
-table tr td:first-child{
-  border-left: 0px;
+.X{
+  color: red !important;
 }
-/* selects last child in td and removes the border from right hand side */
-table tr td:last-child{
-  border-right: 0px;
+footer{
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+}
+#reset:hover{
+  background: blue;
+}
+.x {
+  background-color: red;
+}
+.o{
+  background-color: blue;
 }
