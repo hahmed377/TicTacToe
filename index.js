@@ -4,6 +4,7 @@ $(document).ready(function(){
 
   var turns = 0;
   var player = 1;
+  var winningCombo = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8]];
 
 
   $(".square").on("click", change)
@@ -37,10 +38,11 @@ function CheckIfWon(symbol) {
    $("#reset").on("click",restart)
 // this function will reset the board and allow the users to play again.
    function restart() {
+    location.reload();
+}
+     
 
-     alert("Restart game!");
+   })
 
-   }
- })
  // var innerSqr = $(".square", this);
  // innerSqr.addClass(".dot");

@@ -25,7 +25,7 @@ h2 {
 }
 
 .square {
-  border: 2px solid black;
+  border: 1px solid black;
   height: 115px;
   width: 114px;
   display: inline-block;
@@ -39,12 +39,7 @@ h2 {
   margin-top: 18px;
   background-color: black;
 }
-.O{
-  color: black !important;
-}
-.X{
-  color: red !important;
-}
+
 footer{
   display: block;
   text-align: center;
