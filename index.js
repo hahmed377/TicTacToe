@@ -41,8 +41,8 @@ $(document).ready(function(){
         position[8] = player;
         break;
       default:
-
     }
+    CheckIfWon();
     console.log(position);
     var squareClicked = $(this);
 
@@ -61,22 +61,48 @@ $(document).ready(function(){
       }
     }
     }
-function CheckIfWon(symbol) {
-  for (var i = 0; i < array.length; i++) {
-    array[i]
+function CheckIfWon() {
+  var win = false;
+  for (var i = 0; i < position.length; i+=3) {
+    if (position[i]==player && position[i+1]==player && position[i+2]==player) {
+      win == true;
+    }
+  }
+
+  for (var i = 0; i < 3; i++) {
+    if (position[i]==player && position[i+3]==player && position[i+6]==player) {
+      win == true;
+    }
+  }
+  if (position[0]==player && position[4]==player && position[8]==player || position[2]==player && position[4]==player && position[6]==player) {
+    win == true;
+  }
+
+  var flag = 0;
+
+  for (var i = 0; i < position.length; i++) {
+    if (position[i] != 0) {
+      flag++;
+      if (flag == 9 && win == false) {
+        alert("game is a draw")
+        restart()
+      }
+    }
+
   }
 }
 
-})
 
-
-
-
-   $("#reset").on("click",restart)
+$("#reset").on("click",restart)
 // this function will reset the board and allow the users to play again.
-   function restart() {
-    location.reload();
+function restart() {
+  location.reload();
 }
+
+
+
+
+})
 
 
 
