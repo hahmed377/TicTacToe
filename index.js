@@ -2,14 +2,48 @@ $(document).ready(function(){
 
   var innerSqr = $("#reset");
 
-  var turns = 0;
   var player = 1;
-  var winningCombo = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8]];
+  var position = [0,0,0,0,0,0,0,0];
+
+
 
 
   $(".square").on("click", change)
   function change() {
-    // alert("add something here")
+    var buttonUpdate = $(this).attr("id");
+
+    switch (buttonUpdate) {
+      case "0":
+        position[0] = player;
+        break;
+      case "1":
+        position[1] = player;
+        break;
+      case "2":
+        position[2] = player;
+        break;
+      case "3":
+        position[3] = player;
+        break;
+      case "4":
+        position[4] = player;
+        break;
+      case "5":
+        position[5] = player;
+        break;
+      case "6":
+        position[6] = player;
+        break;
+      case "7":
+        position[7] = player;
+        break;
+      case "8":
+        position[8] = player;
+        break;
+      default:
+
+    }
+    console.log(position);
     var squareClicked = $(this);
 
     if (squareClicked.hasClass("x")||squareClicked.hasClass("o"))
@@ -28,9 +62,12 @@ $(document).ready(function(){
     }
     }
 function CheckIfWon(symbol) {
-
+  for (var i = 0; i < array.length; i++) {
+    array[i]
+  }
 }
 
+})
 
 
 
@@ -40,9 +77,9 @@ function CheckIfWon(symbol) {
    function restart() {
     location.reload();
 }
-     
 
-   })
+
+
 
  // var innerSqr = $(".square", this);
  // innerSqr.addClass(".dot");

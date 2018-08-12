@@ -49,8 +49,12 @@ footer{
   background: blue;
 }
 .x {
+  background-image: url("images/cross.png");
   background-color: red;
+  background-size: cover;
 }
 .o{
-  background-color: blue;
+  background-image: url("images/circle.png");
+
+  background-size: cover;
 }
